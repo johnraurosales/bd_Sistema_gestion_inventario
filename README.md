@@ -16,7 +16,7 @@ Buscan desarrollar un sistema automatizado que permita gestionar con precisión 
 
 🧾 Estructura de las Entidades (Campos Clave)
 
-productos
+1. productos
 id_producto (PK)
 nombre
 descripcion
@@ -28,42 +28,42 @@ stock_actual
 stock_minimo
 precio_unitario
 
-categorias
+2. categorias
 id_categoria (PK)
 nombre
 descripcion
 
-marcas
+3. marcas
 id_marca (PK)
 nombre
 pais_origen
 
-proveedores
+4. proveedores
 id_proveedor (PK)
 nombre
 email
 telefono
 direccion
 
-zonas
+5. zonas
 id_zona (PK)
 nombre
 descripcion
 
-estantes
+6. estantes
 id_estante (PK)
 codigo
 id_zona (FK)
 descripcion
 
-ubicaciones
+7. ubicaciones
 id_ubicacion (PK)
 id_estante (FK)
 nivel (ej. 1, 2, 3)
 capacidad_maxima
 descripcion
 
-movimientos
+8. movimientos
 id_movimiento (PK)
 fecha
 id_tipo_movimiento (FK)
@@ -72,18 +72,18 @@ cantidad
 id_usuario (FK)
 observaciones
 
-tipos_movimiento
+9. tipos_movimiento
 id_tipo_movimiento (PK)
 descripcion (ej. Entrada por compra, Salida por venta, Ajuste por daño, Devolución)
 
-usuarios
+10. usuarios
 id_usuario (PK)
 nombre
 rol
 email
 contraseña (si aplica autenticación)
 
-pedidos
+11. pedidos
 id_pedido (PK)
 id_producto (FK)
 id_proveedor (FK)
@@ -91,7 +91,7 @@ fecha_pedido
 cantidad
 estado (pendiente, recibido, cancelado)
 
-auditorias
+12. auditorias
 id_auditoria (PK)
 accion (INSERT, UPDATE, DELETE, ERROR)
 tabla_afectada
@@ -107,4 +107,8 @@ detalle
 - Todo movimiento debe estar vinculado a un usuario, producto y tipo.
 - Solo usuarios autorizados pueden realizar movimientos o cambios.
 - Todas las acciones relevantes deben quedar registradas en auditoría.
+
+
+
+![Diagrama de entidad relacion](https://github.com/user-attachments/assets/cba5ced3-865e-42be-8bf6-a25efef577d6)
 
