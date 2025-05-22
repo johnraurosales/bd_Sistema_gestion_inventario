@@ -17,9 +17,10 @@ Buscan desarrollar un sistema automatizado que permita gestionar con precisión 
 🧾 Estructura de las Entidades (Campos Clave)
 
 1. productos
-
 id_producto (PK)
+
 nombre
+
 descripcion
 id_categoria (FK)
 id_marca (FK)
