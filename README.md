@@ -19,6 +19,7 @@ Buscan desarrollar un sistema automatizado que permita gestionar con precisión 
 1. productos
 id_producto (PK)
 nombre
+
 descripcion
 id_categoria (FK)
 id_marca (FK)
