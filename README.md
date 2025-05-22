@@ -16,7 +16,7 @@ Buscan desarrollar un sistema automatizado que permita gestionar con precisión 
 
 🧾 Estructura de las Entidades (Campos Clave)
 
-1. productos
+productos
 id_producto (PK)
 nombre
 descripcion
@@ -28,42 +28,42 @@ stock_actual
 stock_minimo
 precio_unitario
 
-2. categorias
+categorias
 id_categoria (PK)
 nombre
 descripcion
 
-3. marcas
+marcas
 id_marca (PK)
 nombre
 pais_origen
 
-4. proveedores
+proveedores
 id_proveedor (PK)
 nombre
 email
 telefono
 direccion
 
-5. zonas
+zonas
 id_zona (PK)
 nombre
 descripcion
 
-6. estantes
+estantes
 id_estante (PK)
 codigo
 id_zona (FK)
 descripcion
 
-7. ubicaciones
+ubicaciones
 id_ubicacion (PK)
 id_estante (FK)
 nivel (ej. 1, 2, 3)
 capacidad_maxima
 descripcion
 
-8. movimientos
+movimientos
 id_movimiento (PK)
 fecha
 id_tipo_movimiento (FK)
@@ -72,18 +72,18 @@ cantidad
 id_usuario (FK)
 observaciones
 
-9. tipos_movimiento
+tipos_movimiento
 id_tipo_movimiento (PK)
 descripcion (ej. Entrada por compra, Salida por venta, Ajuste por daño, Devolución)
 
-10. usuarios
+usuarios
 id_usuario (PK)
 nombre
 rol
 email
 contraseña (si aplica autenticación)
 
-11. pedidos
+pedidos
 id_pedido (PK)
 id_producto (FK)
 id_proveedor (FK)
@@ -91,7 +91,7 @@ fecha_pedido
 cantidad
 estado (pendiente, recibido, cancelado)
 
-12. auditorias
+auditorias
 id_auditoria (PK)
 accion (INSERT, UPDATE, DELETE, ERROR)
 tabla_afectada
