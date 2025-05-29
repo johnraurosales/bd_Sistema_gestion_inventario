@@ -14,90 +14,40 @@ Buscan desarrollar un sistema automatizado que permita gestionar con precisión 
 - Mantener una auditoría detallada de las operaciones del sistema.
 - Permitir búsquedas rápidas y generación de reportes.
 
-🧾 Estructura de las Entidades (Campos Clave)
+🧱 Entidades del Sistema
 
-1. productos
-id_producto (PK)
-nombre
-descripcion
-id_categoria (FK)
-id_marca (FK)
-id_proveedor (FK)
-id_ubicacion (FK)
-stock_actual
-stock_minimo
-precio_unitario
+Productos: Artículos disponibles para la venta
 
-2. categorias
-id_categoria (PK)
-nombre
-descripcion
+Categorías: Clasificación de productos
 
-3. marcas
-id_marca (PK)
-nombre
-pais_origen
+Marcas: Marca del producto
 
-4. proveedores
-id_proveedor (PK)
-nombre
-email
-telefono
-direccion
+Proveedores: Empresas que suministran productos
 
-5. zonas
-id_zona (PK)
-nombre
-descripcion
+Zonas: Áreas del almacén
 
-6. estantes
-id_estante (PK)
-codigo
-id_zona (FK)
-descripcion
+Estantes: Estructuras dentro de las zonas
 
-7. ubicaciones
-id_ubicacion (PK)
-id_estante (FK)
-nivel (ej. 1, 2, 3)
-capacidad_maxima
-descripcion
+Ubicaciones: Niveles o compartimentos de los estantes
 
-8. movimientos
-id_movimiento (PK)
-fecha
-id_tipo_movimiento (FK)
-id_producto (FK)
-cantidad
-id_usuario (FK)
-observaciones
+Usuarios: Empleados que usan el sistema
 
-9. tipos_movimiento
-id_tipo_movimiento (PK)
-descripcion (ej. Entrada por compra, Salida por venta, Ajuste por daño, Devolución)
+Roles: Permisos asociados a los usuarios
 
-10. usuarios
-id_usuario (PK)
-nombre
-rol
-email
-contraseña (si aplica autenticación)
+Tipos de Movimiento: Entrada, salida, ajuste de inventario
 
-11. pedidos
-id_pedido (PK)
-id_producto (FK)
-id_proveedor (FK)
-fecha_pedido
-cantidad
-estado (pendiente, recibido, cancelado)
+Movimientos: Registro de cambios en el inventario
 
-12. auditorias
-id_auditoria (PK)
-accion (INSERT, UPDATE, DELETE, ERROR)
-tabla_afectada
-id_usuario (FK)
-fecha
-detalle
+Pedidos: Solicitudes de productos a proveedores
+
+Auditorías: Historial de acciones de los usuarios
+
+productos_proveedores: Relación M:N entre productos y proveedores
+
+pedidos_productos: Relación M:N entre pedidos y productos
+
+usuarios_roles: Relación M:N entre usuarios y roles
+
 
 
 📋 Reglas del Negocio:
@@ -111,4 +61,10 @@ detalle
 
 
 ![Diagrama de entidad relacion](https://github.com/user-attachments/assets/cba5ced3-865e-42be-8bf6-a25efef577d6)
+
+![image](https://github.com/user-attachments/assets/32d5e7cf-40d8-47b1-af94-66b25d235fe9)
+
+![image](https://github.com/user-attachments/assets/2f733fd4-454b-4fe2-901c-0b67f6a01e98)
+
+
 
