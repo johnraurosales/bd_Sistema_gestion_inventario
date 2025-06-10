@@ -59,8 +59,9 @@ usuarios_roles: Relación M:N entre usuarios y roles
 - Todas las acciones relevantes deben quedar registradas en auditoría.
 
 
+![Diagrama Entidad_Relación Almacen](https://github.com/user-attachments/assets/cc26db8f-c534-42bc-873b-c3d0d3e38ab7)
 
-![Diagrama de entidad relacion](https://github.com/user-attachments/assets/cba5ced3-865e-42be-8bf6-a25efef577d6)
+![ER](https://github.com/user-attachments/assets/d9cf5348-bedd-460a-bef3-ae7d4cd3d8de)
 
 ![image](https://github.com/user-attachments/assets/32d5e7cf-40d8-47b1-af94-66b25d235fe9)
 
